@@ -1,0 +1,29 @@
+html {
+    counter-reset: chapter;
+}
+
+.md-typeset h2 {
+    counter-reset: sub-chapter;
+}
+
+.md-typeset h3 {
+    counter-reset: section;
+}
+
+.md-typeset h2[id]::before {
+    display: inline;
+    counter-increment: chapter;
+    content: counter(chapter) ". ";
+}
+
+.md-typeset h3[id]::before {
+    display: inline;
+    counter-increment: sub-chapter;
+    content: counter(chapter) "." counter(sub-chapter) ". ";
+}
+
+.md-typeset h4[id]::before {
+    display: inline;
+    counter-increment: section;
+    content: counter(chapter) "." counter(sub-chapter) "." counter(section) ". ";
+}
