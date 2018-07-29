@@ -10,6 +10,7 @@ extra_css:
 markdown_extensions:
   - codehilite:
       linenums: true
+  - admonition
 extra:
     search:
         language: 'jp'

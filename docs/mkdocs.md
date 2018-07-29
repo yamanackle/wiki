@@ -132,3 +132,21 @@ html {
     content: counter(chapter) "." counter(sub-chapter) "." counter(section) ". ";
 }
 ```
+
+## 拡張機能: admonition
+
+警告文やメモを目立つスタイルで表示するプラグイン。materialテーマをインストールしていれば、`mkdocs.yml`に以下を追記するのみで利用できる。
+
+```
+markdown_extensions:
+    - admonition
+```
+
+!!! Note
+    materialテーマをインストールしていれば`mkdocs.yml`での設定のみで利用可能。
+
+標準で利用できるパターンは[公式サイト](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)を参照。
+
+
+
+
