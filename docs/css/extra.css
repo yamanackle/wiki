@@ -2,11 +2,21 @@ html {
     counter-reset: chapter;
 }
 
+.md-typeset h1 {
+    font-weight: bold;
+    color: #000;
+    border-bottom: solid 2px #f18b21;
+    padding-bottom: 5px;
+  }
+
 .md-typeset h2 {
+    font-weight: bold;
+    border-bottom: 1px dotted #888;
     counter-reset: sub-chapter;
 }
 
 .md-typeset h3 {
+    font-weight: bold;
     counter-reset: section;
 }
 

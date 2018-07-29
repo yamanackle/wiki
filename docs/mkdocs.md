@@ -87,9 +87,12 @@ mkdocsにはmarkdownをPDF形式で出力する機能はない。そのため、
     * 単一のhtmlしか変換できないため、すべてのコンテンツを一つのPDF化ファイルに出力したい場合は各htmlをPDF化→PDFの結合作業が必要になること
     * `material`テーマ使用時は、検索やナビゲーションバーなどPDFには不要な要素も含めて出力されること
 
-## 章番号を表示する
+## 見出しのスタイルを変更
 
-`material`テーマのデフォルト見出しは、`h1`と`h2`を区別しづらかったり、パッと見たときのレベルが分かりづらいため章番号をつける。
+`material`テーマのデフォルト見出しは、`h1`と`h2`を区別しづらかったり、パッと見たときのレベルが分かりづらいためスタイルを編集する。
+
+### 章番号を表示する
+
 章番号はCSSで自動裁判するのが便利。
 
 CSSで章番号をつけるには、counterを利用する。詳しくは以下のサイトで。
@@ -133,6 +136,24 @@ html {
 }
 ```
 
+### 見出しの調整
+
+```
+.md-typeset h1 {
+  font-weight: bold;
+  color: #000;
+  border-bottom: solid 2px #f18b21;
+  padding-bottom: 5px;
+}
+.md-typeset h2 {
+  font-weight: bold;
+  border-bottom: 1px dotted #888;
+}
+.md-typeset h3 {
+    font-weight: bold;
+}
+```
+
 ## 拡張機能: admonition
 
 警告文やメモを目立つスタイルで表示するプラグイン。materialテーマをインストールしていれば、`mkdocs.yml`に以下を追記するのみで利用できる。
@@ -146,7 +167,3 @@ markdown_extensions:
     materialテーマをインストールしていれば`mkdocs.yml`での設定のみで利用可能。
 
 標準で利用できるパターンは[公式サイト](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)を参照。
-
-
-
-
