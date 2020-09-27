@@ -2,6 +2,7 @@ site_name: My Wiki
 pages:
     - Home: index.md
     - MkDocs: mkdocs.md
+    - Windows Terminal and Powershell: windows-terminal.md
 theme:
   name: material
   language: 'ja'
